@@ -14,7 +14,7 @@ fi
 echo -e "\e[31mUpdating and installing packages...\e[0m"
 
 sudo pacman -Syu
-sudo pacman -S git dbus neovim neofetch curl wget xorg-server xorg-xinit dunst networkmanager network-manager-applet networkmanager-openvpn python-pywal feh fontconfig libxinerama libx11 libxft ncurses zsh picom pulseaudio mpv newsboat transmission-cli make xdg-user-dirs zathura-pdf-poppler zsh-syntax-highlighting
+sudo pacman -S git dbus neovim neofetch curl wget xorg-server xorg-xinit dunst networkmanager network-manager-applet networkmanager-openvpn python-pywal feh fontconfig libxinerama libx11 libxft ncurses zsh picom pulseaudio pamixer mpv newsboat transmission-cli make xdg-user-dirs zathura-pdf-poppler zsh-syntax-highlighting yarn
 
 git clone https://aur.archlinux.org/yay.git
 cd yay
@@ -68,8 +68,8 @@ rm -rf ~/countdown
 git clone https://github.com/joestandring/dwm-bar
 chmod +x ~/dwm-bar/dwm_bar.sh
 sudo mkdir /bin/dwm-bar
-sudo mv ~/dwm-bar/dwm_bar.sh /bin/dwm-bar/dwm-bar
-sudo mv ~/dwm-bar/bar-functions /bin/dwm-bar/bar-functions
+sudo mv ~/dwm-bar/dwm_bar.sh /bin
+sudo mv ~/dwm-bar/bar-functions /bin
 rm -rf ~/dwm-bar
 
 echo -e "\e[31mConfiguring Neovim...\e[0m"
@@ -84,5 +84,5 @@ chsh -s $(which zsh)
 sudo chsh -s $(which zsh)
 zsh
 
-echo -e "\e[31mFinished!\nJust startx to jump right in\e[0m"
+echo -e "\e[31mFinished!\nReboot to finalize\e[0m"
 echo -e "Report bugs to https://github.com/joestandring/arch-config-installer"
