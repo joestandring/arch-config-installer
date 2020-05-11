@@ -46,7 +46,7 @@ sudo systemctl start dbus
 
 echo -e "\e[31mFirst time color setup...\n[0m"
 
-wal -i ~/.dot/arch.png
+wal -i ~/arch-config-installer/arch.png
 ~/.config/dunst/wal.sh
 
 echo -e "\e[31mBuilding packages...\e[0m"
