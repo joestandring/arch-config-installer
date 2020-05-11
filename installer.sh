@@ -14,7 +14,7 @@ fi
 echo -e "\e[31mUpdating and installing packages...\e[0m"
 
 sudo pacman -Syu
-sudo pacman -S git dbus neovim neofetch curl wget xorg-server xorg-xinit dunst networkmanager network-manager-applet networkmanager-openvpn pywal feh fontconfig libxinerama libx11 libxft ncurses st-terminfo zsh picom pulseaudio mpv newsboat transmission make xdg-user-dirs zathura-pds-poppler zsh-syntax-highlighting
+sudo pacman -S git dbus neovim neofetch curl wget xorg-server xorg-xinit dunst networkmanager network-manager-applet networkmanager-openvpn python-pywal feh fontconfig libxinerama libx11 libxft ncurses zsh picom pulseaudio mpv newsboat transmission-cli make xdg-user-dirs zathura-pdf-poppler zsh-syntax-highlighting
 
 git clone https://aur.archlinux.org/yay.git
 cd yay
