@@ -13,12 +13,12 @@ fi
 
 echo -e "\e[31mUpdating and installing packages...\e[0m"
 
-sudo pacman --noconfirm -Syu
-sudo pacman --noconfirm -S git dbus neovim neofetch curl wget xorg-server xorg-xinit dunst networkmanager network-manager-applet networkmanager-openvpn pywal feh fontconfig libxinerama libx11 libxft ncurses st-terminfo zsh picom pulseaudio mpv newsboat transmission make xdg-user-dirs zathura-pds-poppler zsh-syntax-highlighting
+sudo pacman -Syu
+sudo pacman -S git dbus neovim neofetch curl wget xorg-server xorg-xinit dunst networkmanager network-manager-applet networkmanager-openvpn pywal feh fontconfig libxinerama libx11 libxft ncurses st-terminfo zsh picom pulseaudio mpv newsboat transmission make xdg-user-dirs zathura-pds-poppler zsh-syntax-highlighting
 
 git clone https://aur.archlinux.org/yay.git
 cd yay
-makepkg --noconfirm -si
+makepkg -si
 cd ..
 rm -rf yay
 
@@ -77,6 +77,12 @@ echo -e "\e[31mConfiguring Neovim...\e[0m"
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 vim +PluginInstall +qall
+
+echo -e "\e[31mChanging shells\e[0m"
+
+chsh -s $(which zsh)
+sudo chsh -s $(which zsh)
+zsh
 
 echo -e "\e[31mFinished!\nJust startx to jump right in\e[0m"
 echo -e "Report bugs to https://github.com/joestandring/arch-config-installer"
